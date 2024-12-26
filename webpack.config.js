@@ -1,13 +1,14 @@
 
 const path = require("path");
-const HtmlWapPackPlugin = require("html-webpack-plugin")
+const HtmlWapPackPlugin = require("html-webpack-plugin");
+const { loadavg } = require("os");
 module.exports = {
     mode: "development",
     entry: "./src/index.js",
     output: {
         filename: "main.js",
         path: path.resolve(__dirname, "dist"),
-        assetModuleFilename: "[name][ext]",
+
         clean: true,
     },
     devtool: "eval-source-map",
@@ -21,23 +22,19 @@ module.exports = {
 
         })
     ],
+
     module: {
         rules: [{
             test: /\.css$/i,
             use: ['style-loader', 'css-loader']
         },
 
+      
         {
-            test: /\.(png|svg|jpg|jpeg|gif)$/i,
-            type: "asset/resource",
-        },
-        {
-            test: /\.(png|jpe?g|gif)$/i,
-            loader: 'file-loader',
-            options: {
-              name: '[path][name].[ext]',
-            },
-          },
+            test: /\.(jpg|png|svg|gif)$/,
+            type: 'asset/resource',
+      },
+        
 
         ]
     }
