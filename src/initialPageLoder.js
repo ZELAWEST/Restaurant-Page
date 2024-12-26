@@ -14,7 +14,7 @@ function pageLoad(contentDiv) {
 
 	const homePicDiv = document.createElement('p')
 	
-	homePicDiv.id = 'picture'
+	homePicDiv.id = 'home'
 	//  homePicDiv.append(img)
 	
 
