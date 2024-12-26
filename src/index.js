@@ -1,5 +1,5 @@
 // import resPicture from'./restaurant.png'
-import {pageLoad} from './pageload'
+import {pageLoad} from './homepage.js'
 const img = document.createElement('img')
 // img.src = resPicture
 // document.body.append(img)
