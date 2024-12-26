@@ -3,7 +3,7 @@ export default class About {
 
     constructor() {
         this.aboutElement = document.createElement('div')
-        this.aboutElement.id = 'menu'
+        this.aboutElement.id = 'about'
         this.img = document.createElement('img')
     }
     setDivPic = () => {
