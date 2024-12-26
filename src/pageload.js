@@ -1,29 +1,33 @@
-import resPicture from'./restaurant.png'
+import resPicture from './restaurant.png'
 const divContent = document.querySelector('#content')
+
+
+
 function pageLoad() {
 	//Add heading
 	const restaurantHeading = document.createElement('h1')
-	restaurantHeading.textContent = 'The Soul Of Food Restaurant'
-    divContent.append(restaurantHeading)
-// console.log(homepicture)
-//Add homepage image
+	restaurantHeading.textContent = 'The Soul Of Food Restaurant '
+	divContent.append(restaurantHeading)
 
-const img = document.createElement('img')
-// img.src = homepicture
+	//Add homepage image
+	
+	const img = document.createElement('img')
+	 img.src = resPicture
+     img.alt = "Restaurant Home Picture"
 
+	const homePicDiv = document.createElement('p')
+	 homePicDiv.append(img)
+	 divContent.append(homePicDiv)
+	//Add message
+	const welcomeMgs = document.createElement('p')
+	welcomeMgs.textContent = "Welcome to our Food Soul Restaurant Enjoy !"
+	divContent.append(welcomeMgs)
 
+    
 
-      const homePicDiv = document.createElement('p')
-	 // homePicDiv.append(img)
-	  homePicDiv.style.width = '100px'
-	    homePicDiv.style.height = '30%'
-	   homePicDiv.style.backgroundImage = 'url('+ resPicture + ')'
 
 	
 
-
-divContent.append(homePicDiv)
-
 }
 
-export {pageLoad}
+export { pageLoad }
