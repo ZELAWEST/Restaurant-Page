@@ -19,13 +19,23 @@ module.exports = {
 
 
             {
-                test: /\.(jpg|png|svg|gif)$/,
+                test: /\.(jpg|png|svg|gif)$/i,
                 type: 'asset/resource',
             },
+            {
+                test: /\.html$/i,
+                loader: "html-loader",
+              },
+              
 
 
         ]
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+          template: "./src/template.html",
+        }),
+      ],
 
     output: {
         filename: 'main.js',
